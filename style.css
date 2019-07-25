@@ -5,6 +5,7 @@
 
 html{
 	overflow-x: hidden;
+	scroll-behavior: smooth;
 }
 
 /*CABEÇALHO DE NAVEGAÇÃO*/
@@ -60,6 +61,7 @@ html{
 		background-color: black;
 		width: 100%;
 		height: 15%;
+		transition: all .5s;
 	}
 /*FIM MENU ICON*/
 
@@ -98,7 +100,8 @@ html{
 		margin-top: 3vh;
 		width: 80%;
 		font-size: 1rem;
-		font-family: "Courier New", Courier, monospace;
+		font-family: 'Roboto', sans-serif;
+		letter-spacing: 1px;
 		text-align: center;
 	}
 
@@ -113,12 +116,44 @@ html{
 	}
 /*FIM TELA INICIAL*/
 
+/*SOBRE*/
+	.Sobre{width: 100%; display: flex; justify-content: center; background-color: #ccc;}
+	.Sobre .contentSobre{
+		width: 80%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		
+	}
+
+	.Sobre .contentSobre h1{
+		margin-top: 5rem;
+		font-family: Copperplate, "Copperplate Gothic Light", fantasy;
+		color: black;
+		font-weight: bold;
+		text-shadow: 1px 1px white;
+	}
+
+	.Sobre .contentSobre p{
+		margin-top: 1.5rem;
+		/*font-family: Futura, "Trebuchet MS", Arial, sans-serif;*/
+		font-family: 'Roboto', sans-serif;
+		letter-spacing: 1px;
+	}
+
+	.Sobre .contentSobre p:last-child{
+		margin-bottom: 10vh;
+	}
+
 
 @media only screen and (max-width: 576px) {
+
+/*CABEÇAlHO*/
 	header nav ul li a{
 		margin-left: 0.7rem;
 		margin-right: 0.7rem; 
-		font-size: 0.9rem;		
+		font-size: 1rem;		
 	}
 	header nav{
 		margin-left: 0.5rem;
@@ -140,7 +175,7 @@ html{
 	}
 
 	#btn_menu:checked ~ header nav ul li label div span:nth-child(1){
-		transform: rotate(315deg) translate(-7px, 7px);
+		transform: rotate(315deg) translate(-8px, 7px);
 		transition: all .5s;
 	}
 
@@ -162,9 +197,22 @@ html{
 	}
 
 /*FIM MENU ICON*/
+
+/*TELA INICIAL*/
+	section .banner .contentPerfil p{
+		width: 95%;
+	}
+
+	section .banner .contentPerfil hr{
+		margin-top: 10vh;
+		width: 90%;
+	}
+
+
 }
 
 @media only screen and (min-width: 576px) {
+/*CABEÇAlHO*/
 	header nav ul li a{
 		margin-left: 1rem;
 		margin-right: 1rem; 
