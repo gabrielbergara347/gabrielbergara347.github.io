@@ -7,85 +7,161 @@ html{
 	overflow-x: hidden;
 }
 
-header{
-	position: fixed;
-	width: 100%;
-	height: 10vh;
-	background: linear-gradient(45deg, rgba(0,104,112,1) 0%, rgba(80,164,164,1) 19%, rgba(12,166,167,1) 37%, rgba(20,122,122,1) 65%, rgba(0,214,215,1) 99%);
-}
+/*CABEÇALHO DE NAVEGAÇÃO*/
+	header{
+		position: fixed;
+		width: 100%;
+		height: 10vh;
+		background: linear-gradient(45deg, rgba(0,104,112,1) 0%, rgba(80,164,164,1) 19%, rgba(12,166,167,1) 37%, rgba(20,122,122,1) 65%, rgba(0,214,215,1) 99%);
+	}
 
-header nav{
-	display: flex;
-	justify-content: center;
-}
+	header nav{
+		display: flex;
+		justify-content: center;
+	}
 
-header nav ul{
-	height: 10vh;
-	display: flex;
-	align-items: center;
-	list-style: none;
-}
+	header nav ul{
+		height: 10vh;
+		display: flex;
+		align-items: center;
+		list-style: none;
+	}
 
-header nav ul li a{
-	text-decoration: none;
-	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-	color: white;
-}
+	header nav ul li a{
+		text-decoration: none;
+		font-family: Copperplate, "Copperplate Gothic Light", fantasy;
+		color: black;
+		font-weight: bold;
+		text-shadow: 1px 1px white;
+	}
+/*FIM CABEÇALHO DE NAVEGAÇÃO*/
 
-section .banner{
-	background-color: #ccc;
-	background: linear-gradient(90deg, rgba(0,105,103,1) 0%, rgba(160,246,255,1) 50%, rgba(0,88,97,1) 100%);
-	width: 100vw;
-	display: flex;
-	flex-direction: column;
-}
+/*MENU ICON*/
+	#btn_menu{
+		display: none;
+		visibility: hidden;
+	}
 
-section .banner .contentPerfil{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	margin-top: 10vh;
-}
+	header nav ul li:first-child{
+		display: none;
+		visibility: hidden;
+	}
 
-section .banner .contentPerfil h1{
-	margin-top: 5vh;
-	font-family: "Courier New", Courier, monospace;
-}
+	header nav ul li label .IconMenu{
+		width: 1.8rem;
+		height: 1.6rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+	}
 
-section .banner .contentPerfil img{
-	margin-top: 2.5vh;
-	margin-bottom: 2.5vh;
-	height: 10rem;
-	border: 1px solid black;
-	box-shadow: 3px 3px 2px #333;
-}
+	header nav ul li label .IconMenu span{
+		background-color: black;
+		width: 100%;
+		height: 15%;
+	}
+/*FIM MENU ICON*/
 
-section .banner .contentPerfil p{
-	margin-top: 3vh;
-	width: 80%;
-	font-size: 1rem;
-	font-family: "Courier New", Courier, monospace;
-	text-align: center;
-}
 
-section .banner .contentPerfil p:last-child{
-	margin-bottom: 6vh;
-	font-size: 1.2rem;
-}
+/*TELA INICIAL*/
+	section .banner{
+		background-color: #ccc;
+		background: linear-gradient(90deg, rgba(0,105,103,1) 0%, rgba(160,246,255,1) 50%, rgba(0,88,97,1) 100%);
+		width: 100vw;
+		display: flex;
+		flex-direction: column;
+	}
 
-section .banner .contentPerfil hr{
-	margin-top: 10vh;
-	width: 60%;
-}
+	section .banner .contentPerfil{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-top: 10vh;
+	}
 
+	section .banner .contentPerfil h1{
+		margin-top: 5vh;
+		font-family: "Courier New", Courier, monospace;
+		text-shadow: 1px 1px white;
+	}
+
+	section .banner .contentPerfil img{
+		margin-top: 2.5vh;
+		margin-bottom: 2.5vh;
+		height: 10rem;
+		border: 1px solid black;
+		box-shadow: 3px 3px 2px #333;
+	}
+
+	section .banner .contentPerfil p{
+		margin-top: 3vh;
+		width: 80%;
+		font-size: 1rem;
+		font-family: "Courier New", Courier, monospace;
+		text-align: center;
+	}
+
+	section .banner .contentPerfil p:last-child{
+		margin-bottom: 6vh;
+		font-size: 1.2rem;
+	}
+
+	section .banner .contentPerfil hr{
+		margin-top: 10vh;
+		width: 60%;
+	}
+/*FIM TELA INICIAL*/
 
 
 @media only screen and (max-width: 576px) {
 	header nav ul li a{
 		margin-left: 0.7rem;
 		margin-right: 0.7rem; 
-		font-size: 1.2rem;
+		font-size: 0.9rem;		
 	}
+	header nav{
+		margin-left: 0.5rem;
+		justify-content: flex-start;
+	}
+
+	header nav ul li{
+		visibility: hidden;
+		opacity: 0;
+		transition: all .4s;
+	}
+
+
+/*MENU ICON*/
+	header nav ul li:first-child{
+		display: flex;
+		visibility: visible;
+		opacity: 1;
+	}
+
+	#btn_menu:checked ~ header nav ul li label div span:nth-child(1){
+		transform: rotate(315deg) translate(-7px, 7px);
+		transition: all .5s;
+	}
+
+	#btn_menu:checked ~ header nav ul li label div span:nth-child(3){
+		transform: rotate(405deg) translate(-7px, -8px);
+		transition: all .5s;
+	}
+
+	#btn_menu:checked ~ header nav ul li label div span:nth-child(2){
+		opacity: 0;
+		transition: all .4s;
+	}
+
+	#btn_menu:checked ~ header nav ul li{
+		transition: all .4s;
+		visibility: visible;
+		display: flex;
+		opacity: 1;
+	}
+
+/*FIM MENU ICON*/
 }
 
 @media only screen and (min-width: 576px) {
