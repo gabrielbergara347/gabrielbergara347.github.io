@@ -16,6 +16,8 @@ body{
 	--menu-item-color: black;
 	--font-title: 'Saira Stencil One', cursive;
 	--font-text: 'Roboto', sans-serif;
+	--bg-color-section: #ccc;
+	--border-color-projects: 2px solid white;
 }
 
 .menu{
@@ -54,7 +56,7 @@ body{
 .wrapper{
 	width: 100vw;
 	min-height: 100vh;
-	background-color: #ccc;
+	background-color: var(--bg-color-section);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -75,7 +77,7 @@ body{
 }
 
 .wrapper__perfil__img{
-	margin-top: 1em;
+	margin: 1em 0 0 0;
 	width: 20em;
 	border: 1px outset black;
 }
@@ -92,6 +94,53 @@ body{
 	width: 80vw;
 }
 
+/*Sobre*/
+.wrapper__sobre{
+	margin-top: 2em;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #fff;
+	width: 100vw;
+	border-top: 2px outset #333;
+	border-bottom: 2px outset #333; 
+}
+
+.wrapper__sobre__title{
+	margin-top: 2em;
+	font-family: var(--font-text);
+	font-weight: bolder;
+	text-shadow: 1px 1px #fff;
+}
+
+.wrapper__sobre__text{
+	margin: 1em 0 1em 0;
+	width: 60vw;
+	text-align: center;
+	font-family: var(--font-text);
+}
+
+.wrapper__sobre__text:last-child{
+	margin-bottom: 3em;
+}
+
+/*PROJETOS*/
+.wrapper__projetos{
+	margin-top: 2em;
+	background-color: var(--bg-color-section);
+	min-height: 100vh;
+	width: 100vw;
+	display: inline-flex;
+}
+
+.wrapper__projetos-box{
+	width: 20em;
+	height: 20em;
+	background-color: white;
+	margin: 0 5em 0 5em;
+}
+
+
 
 
 @media only screen and (max-width: 576px) {
@@ -106,6 +155,54 @@ body{
 
 	.wrapper__perfil__text{
 		width: 90vw;
+	}
+
+	.wrapper__sobre__text:before{
+		content: '\00a0 \00a0 \00a0 \00a0';
+	}
+
+	.wrapper__sobre__text{
+		width: 90vw;
+		text-align: justify;
+	}
+
+}
+
+@media only screen and (min-width: 576px) {
+	body{
+		font-size: 90%
+	}
+
+	.wrapper__perfil hr{
+		margin-top: 4em;
+		width: 80vw;
+	}
+
+	.wrapper__perfil__text{
+		width: 90vw;
+	}
+
+	.wrapper__sobre__text{
+		width: 90vw;
+	}
+}
+
+@media only screen and (min-width: 992px) {
+	body{
+		font-size: 100%
+	}
+
+	.wrapper__perfil hr{
+		margin-top: 8em;
+		width: 80vw;
+	}
+
+	.wrapper__perfil__text{
+		width: 60vw;
+	}
+
+	.wrapper__sobre__text{
+		width: 60vw;
 	}
 
 }
