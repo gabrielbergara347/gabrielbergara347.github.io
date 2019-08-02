@@ -8,221 +8,104 @@ html{
 	scroll-behavior: smooth;
 }
 
-/*CABEÇALHO DE NAVEGAÇÃO*/
-	header{
-		position: fixed;
-		width: 100%;
-		height: 10vh;
-		background: linear-gradient(45deg, rgba(0,104,112,1) 0%, rgba(80,164,164,1) 19%, rgba(12,166,167,1) 37%, rgba(20,122,122,1) 65%, rgba(0,214,215,1) 99%);
-	}
+body{
+	font-size: 100%;
+}
 
-	header nav{
-		display: flex;
-		justify-content: center;
-	}
+:root{
+	--menu-item-color: black;
+	--font-title: 'Saira Stencil One', cursive;
+	--font-text: 'Roboto', sans-serif;
+}
 
-	header nav ul{
-		height: 10vh;
-		display: flex;
-		align-items: center;
-		list-style: none;
-	}
+.menu{
+	position: fixed;
+	width: 	100vw;
+	height: 55px;
+	background: rgb(33, 47, 60, .7);
+	display: flex;
+	justify-content: center;
+	/*border-bottom: 1px solid #ccc;*/
+}
 
-	header nav ul li a{
-		text-decoration: none;
-		font-family: Copperplate, "Copperplate Gothic Light", fantasy;
-		color: black;
-		font-weight: bold;
-		text-shadow: 1px 1px white;
-	}
-/*FIM CABEÇALHO DE NAVEGAÇÃO*/
+.menu-nav__lista{
+	display: flex;
+	align-items: center;
+	list-style: none;
+	height: 55px;
+}
 
-/*MENU ICON*/
-	#btn_menu{
-		display: none;
-		visibility: hidden;
-	}
+.menu-nav__lista-item{
+	margin: 0 .3em 0 .3em;
+}
 
-	header nav ul li:first-child{
-		display: none;
-		visibility: hidden;
-	}
-
-	header nav ul li label .IconMenu{
-		width: 1.8rem;
-		height: 1.6rem;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		align-items: center;
-	}
-
-	header nav ul li label .IconMenu span{
-		background-color: black;
-		width: 100%;
-		height: 15%;
-		transition: all .5s;
-	}
-/*FIM MENU ICON*/
+.menu-nav__lista-item__default{
+	text-decoration: none;
+	font-size: 1.5em;
+	text-shadow: 1px 1px #fff;
+	letter-spacing: 1px;
+	font-family: var(--font-title);
+	color: var(--menu-item-color);
+	
+}
 
 
-/*TELA INICIAL*/
-	section .banner{
-		background-color: #ccc;
-		background: linear-gradient(90deg, rgba(0,105,103,1) 0%, rgba(160,246,255,1) 50%, rgba(0,88,97,1) 100%);
-		width: 100vw;
-		display: flex;
-		flex-direction: column;
-	}
+/*MAIN*/
+.wrapper{
+	width: 100vw;
+	min-height: 100vh;
+	background-color: #ccc;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
 
-	section .banner .contentPerfil{
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		margin-top: 10vh;
-	}
+.wrapper__perfil{
+	margin-top: 55px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
 
-	section .banner .contentPerfil h1{
-		margin-top: 5vh;
-		font-family: "Courier New", Courier, monospace;
-		text-shadow: 1px 1px white;
-	}
+.wrapper__perfil__title{
+	margin-top: 1em;
+	font-family: var(--font-text);
+	font-weight: bolder;
+	text-shadow: 1px 1px #fff;
+}
 
-	section .banner .contentPerfil img{
-		margin-top: 2.5vh;
-		margin-bottom: 2.5vh;
-		height: 10rem;
-		border: 1px solid black;
-		box-shadow: 3px 3px 2px #333;
-	}
+.wrapper__perfil__img{
+	margin-top: 1em;
+	width: 20em;
+	border: 1px outset black;
+}
 
-	section .banner .contentPerfil p{
-		margin-top: 3vh;
-		width: 80%;
-		font-size: 1rem;
-		font-family: 'Roboto', sans-serif;
-		letter-spacing: 1px;
-		text-align: center;
-	}
+.wrapper__perfil__text{
+	margin-top: 1em;
+	width: 60vw;
+	text-align: center;
+	font-family: var(--font-text);
+}
 
-	section .banner .contentPerfil p:last-child{
-		margin-bottom: 6vh;
-		font-size: 1.2rem;
-	}
+.wrapper__perfil hr{
+	margin-top: 8em;
+	width: 80vw;
+}
 
-	section .banner .contentPerfil hr{
-		margin-top: 10vh;
-		width: 60%;
-	}
-/*FIM TELA INICIAL*/
-
-/*SOBRE*/
-	.Sobre{width: 100%; display: flex; justify-content: center; background-color: #ccc;}
-	.Sobre .contentSobre{
-		width: 80%;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		
-	}
-
-	.Sobre .contentSobre h1{
-		margin-top: 5rem;
-		font-family: Copperplate, "Copperplate Gothic Light", fantasy;
-		color: black;
-		font-weight: bold;
-		text-shadow: 1px 1px white;
-	}
-
-	.Sobre .contentSobre p{
-		margin-top: 1.5rem;
-		/*font-family: Futura, "Trebuchet MS", Arial, sans-serif;*/
-		font-family: 'Roboto', sans-serif;
-		letter-spacing: 1px;
-	}
-
-	.Sobre .contentSobre p:last-child{
-		margin-bottom: 10vh;
-	}
 
 
 @media only screen and (max-width: 576px) {
-
-/*CABEÇAlHO*/
-	header nav ul li a{
-		margin-left: 0.7rem;
-		margin-right: 0.7rem; 
-		font-size: 1rem;		
-	}
-	header nav{
-		margin-left: 0.5rem;
-		justify-content: flex-start;
+	body{
+		font-size: 90%
 	}
 
-	header nav ul li{
-		visibility: hidden;
-		opacity: 0;
-		transition: all .4s;
+	.wrapper__perfil hr{
+		margin-top: 7em;
+		width: 80vw;
 	}
 
-
-/*MENU ICON*/
-	header nav ul li:first-child{
-		display: flex;
-		visibility: visible;
-		opacity: 1;
+	.wrapper__perfil__text{
+		width: 90vw;
 	}
 
-	#btn_menu:checked ~ header nav ul li label div span:nth-child(1){
-		transform: rotate(315deg) translate(-8px, 7px);
-		transition: all .5s;
-	}
-
-	#btn_menu:checked ~ header nav ul li label div span:nth-child(3){
-		transform: rotate(405deg) translate(-7px, -8px);
-		transition: all .5s;
-	}
-
-	#btn_menu:checked ~ header nav ul li label div span:nth-child(2){
-		opacity: 0;
-		transition: all .4s;
-	}
-
-	#btn_menu:checked ~ header nav ul li{
-		transition: all .4s;
-		visibility: visible;
-		display: flex;
-		opacity: 1;
-	}
-
-/*FIM MENU ICON*/
-
-/*TELA INICIAL*/
-	section .banner .contentPerfil p{
-		width: 95%;
-	}
-
-	section .banner .contentPerfil hr{
-		margin-top: 10vh;
-		width: 90%;
-	}
-
-
-}
-
-@media only screen and (min-width: 576px) {
-/*CABEÇAlHO*/
-	header nav ul li a{
-		margin-left: 1rem;
-		margin-right: 1rem; 
-		font-size: 1.7rem;
-	}
-
-}
-
-@media only screen and (min-width: 992px) {
-	section .banner .contentPerfil img{
-		height: 20rem;
-	}
 }

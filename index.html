@@ -5,59 +5,32 @@
 	<meta name="viewport" content="width=device-width">
 	<link rel="stylesheet" href="style.css" type="text/css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Saira+Stencil+One&display=swap" rel="stylesheet">
+
+
 </head>
 <body>
-	<input type="checkbox" id="btn_menu">
-
-<!-- CABEÇALHO -->
-	<header>
-		<!-- Menu de Navegação -->
-		<nav>
-			<ul>
-				<li>
-					<label for="btn_menu">
-						<div class="IconMenu">
-							<span></span>
-							<span></span>
-							<span></span>
-						</div>
-					</label>
-				</li>
-				<li><a href="#Sobre">Sobre</a></li>
-				<li><a href="#">Projetos</a></li>
-				<li><a href="#">Contato</a></li>
+	<!-- BEM [BLOCK, MODIFIER, ELEMENT] -->
+	<header class="menu">	
+		<nav class="menu-nav">
+			<ul class="menu-nav__lista">
+				<li class="menu-nav__lista-item"><a href="#" class="menu-nav__lista-item__default">Sobre</a></li>
+				<li class="menu-nav__lista-item"><a href="#" class="menu-nav__lista-item__default">Projetos</a></li>
+				<li class="menu-nav__lista-item"><a href="#" class="menu-nav__lista-item__default">Contato</a></li>
 			</ul>
-		</nav>			
+		</nav>
 	</header>
 
-<!-- CORPO -->
-	<section>
-		<div class="banner">
-			<div class="contentPerfil">
-				<h1>Gabriel Esnack</h1>
-				<img src="perfilimg.jpg" alt="Foto">
-				<p>Atualmente, estudante de 18 anos.</p>
-				<p><strong>Minhas Habilidades:</strong> Html, Css, JavaScript, C#, Sql Server.</p>
-				<p><strong>Conhecimentos Extras:</strong> Android Studio, PHP, C, MySQL, Sqlite, Materialize, Bootstrap, Git.</p>
-				<hr>
-				<p>"Desenvolvedor - Estudante na Fatec Sorocaba - Apaixonado por Programação"</p>
-				<!-- <p>My skills: {"Html","Css","JavaScript","C#","Sql Server"} </p>
-				<p>Conhecimentos Extras: {"Android Studio","PHP", "MySql","Sqlite", "Materialize","Bootstrap","Git"}</p> -->
-			</div>
-		</div>
-		<section id="Sobre"></section>
-		<div class="Sobre">
-			<div class="contentSobre">
-				<h1>Sobre</h1>
-				<p>Olá me chamo Gabriel Esnack e este é o meu site. Nele eu conto um pouco sobre min e os meus projetos em T.I!</p>
-				<p>Sou uma pessoa que adora desafios, pois eles me fazem sempre possuir um objetivo a ser alcançado e também algo a ser descoberto, já que sou uma pessoa curiosa e que gosta de explorar, seja algo profissional ou por hobby. Gosto bastante de viajar e conhecer novos lugares e pessoas.</p>
-				<p>Durante a minha entrada na faculdade, conheci varias pessoas de T.I as quais eu sou muito grato por me receberem e com elas poder me desenvolver e também comecei a participar de meetups que só aumentaram ainda mais a minha paixão pela area.</p>
-			</div>
-		</div>
-	</section>
-<!-- RODAPE -->
-	<footer>	
-
-	</footer>
+	<main class="wrapper">
+		<section class="wrapper__perfil">
+			<h1 class="wrapper__perfil__title">Gabriel Esnack</h1>
+			<img src="perfilimg.jpg" alt="Foto de Perfil" class="wrapper__perfil__img">
+			<p class="wrapper__perfil__text">Atualmente, estudante de 18 anos.</p>
+			<p class="wrapper__perfil__text"><strong>Minhas Habilidades:</strong> Html, Css, JavaScript, C#, Sql Server.</p>
+			<p class="wrapper__perfil__text"><strong>Conhecimentos Extras:</strong> Android Studio, PHP, C, MySQL, Sqlite, Materialize, Bootstrap, Git.</p>
+			<hr>
+			<p class="wrapper__perfil__text">"Desenvolvedor - Estudante na Fatec Sorocaba - Apaixonado por Programação"</p>
+		</section>
+	</main>
 </body>
 </html>
