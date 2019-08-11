@@ -13,18 +13,21 @@ body{
 }
 
 :root{
-	--menu-item-color: black;
-	--font-title: 'Saira Stencil One', cursive;
+	--menu-item-color: white;
+	--font-title: 'Roboto', sans-serif;
 	--font-text: 'Roboto', sans-serif;
-	--bg-color-section: #ccc;
-	--border-color-projects: 2px solid white;
+	--bg-color-section: linear-gradient(0deg, rgba(105,234,237,1) 0%, rgba(34,124,115,1) 100%);
+
+	/*linear-gradient(0deg, rgba(188,226,246,1) 0%, rgba(105,234,237,1) 8%, rgba(34,124,115,1) 100%);*/
+	--border-color-projects: 2px solid black;
 }
 
 .menu{
 	position: fixed;
+	z-index: 10;
 	width: 	100vw;
 	height: 55px;
-	background: rgb(33, 47, 60, .7);
+	background: rgba(0, 0, 0  ,.35);
 	display: flex;
 	justify-content: center;
 	/*border-bottom: 1px solid #ccc;*/
@@ -43,8 +46,8 @@ body{
 
 .menu-nav__lista-item__default{
 	text-decoration: none;
+	font-weight: 300;
 	font-size: 1.5em;
-	text-shadow: 1px 1px #fff;
 	letter-spacing: 1px;
 	font-family: var(--font-title);
 	color: var(--menu-item-color);
@@ -56,7 +59,7 @@ body{
 .wrapper{
 	width: 100vw;
 	min-height: 100vh;
-	background-color: var(--bg-color-section);
+	background: var(--bg-color-section);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -72,14 +75,16 @@ body{
 .wrapper__perfil__title{
 	margin-top: 1em;
 	font-family: var(--font-text);
-	font-weight: bolder;
-	text-shadow: 1px 1px #fff;
+	font-weight: 500;
+	text-shadow: 1px 1px #000;
+	color: black;
+	text-shadow: 1px 1px white;
 }
 
 .wrapper__perfil__img{
 	margin: 1em 0 0 0;
 	width: 20em;
-	border: 1px outset black;
+	border: 1px outset white;
 }
 
 .wrapper__perfil__text{
@@ -87,7 +92,9 @@ body{
 	width: 60vw;
 	text-align: center;
 	font-family: var(--font-text);
+	color: black;
 }
+
 
 .wrapper__perfil hr{
 	margin-top: 8em;
@@ -125,21 +132,80 @@ body{
 }
 
 /*PROJETOS*/
-.wrapper__projetos{
-	margin-top: 2em;
-	background-color: var(--bg-color-section);
+.wrapper__projetos{	
+	padding-top: 2em;
+	background: var(--bg-color-section);
 	min-height: 100vh;
 	width: 100vw;
-	display: inline-flex;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+
+	position: relative;
+	z-index: 9;
 }
 
 .wrapper__projetos-box{
+	position: relative;
 	width: 20em;
-	height: 20em;
-	background-color: white;
-	margin: 0 5em 0 5em;
+	height: 25em;
+	background-color: #566573;
+	margin: 1em 5em 1em 5em;
+	/*border: var(--border-color-projects);*/
+	border-radius: 4em 0 4em 0;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
+.wrapper__projetos-box:before{
+	content: '';
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background: #fff;
+	z-index: -1;
+	padding: 2px;
+	top: -2px;
+	left: -2px;
+	border-radius: 2.5em 0 2.5em 0;
+}
+
+.wrapper__projetos-box:after{
+	content: '';
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background: white;
+	z-index: -2;
+	padding: 2px;
+	top: -2px;
+	left: -2px;
+	filter: blur(40px);
+}
+
+.wrapper__projetos-box h1{
+	margin: .25em 0 .25em 0;
+	font-family: 'Merriweather', serif;
+	font-size: 1.2em;
+	font-weight: 100;
+	color: white;
+}
+
+.wrapper__projetos-box img{
+	width: 100%;
+	border: 2px solid white;
+}
+
+.wrapper__projetos-box p{
+	margin: .5em 0 .25em 0;
+	font-family: var(--font-text);
+	font-weight: 100;
+	width: 80%;
+	text-align: center;
+	color: white;
+}
 
 
 
@@ -164,6 +230,10 @@ body{
 	.wrapper__sobre__text{
 		width: 90vw;
 		text-align: justify;
+	}
+
+	.wrapper__projetos-box{
+		margin: 0;
 	}
 
 }
